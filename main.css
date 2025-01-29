@@ -17,6 +17,12 @@ input.fButton {
     text-align: center;
 }
 
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 input.fButton:hover {
      
     background: #ffffff;
@@ -84,7 +90,6 @@ body {
 	display: block;
 }
 
- <hr style="width:50%;text-align:left;margin-left:0"> 
 
 .center {
   display: block;
@@ -97,7 +102,7 @@ body {
 div#main-container {
     min-height: 100vh;
     background: white;
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
@@ -162,11 +167,6 @@ div#header-text-container a{
 
 }
 
-div#header-text-container a:hover{
-	color: #ff4040;
-	background-color: black;
-}
-
 div#layout {
 	width: 100vw;
 	min-height: calc(100vh - 70px);
@@ -176,16 +176,12 @@ div#layout {
 	background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, 	rgba(255,255,255,1) 100%); 
 }
 
-div#layout-menu-container{
-}
 
 div#layout-menu {
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 0px;
 	padding-bottom: 25px;
-/*	height: calc(100% - 97px);*/
-/*	min-width: 210px;*/
 	position: fixed;
 	overflow: scroll;
 	background: #f6f8fa;
@@ -437,8 +433,7 @@ ol ol ol {
 	list-style-type: lower-roman;
 }
 
-div.codeblock {
-}
+
 
 p + div.codeblock {
 	margin-top: 0.6em;
@@ -504,9 +499,6 @@ table.styled-table tr:hover {
 }
 
 
-
-
-
 div.blockcontent p + ul, div.blockcontent p + ol {
 	margin-top: 0.4em;
 }
@@ -530,29 +522,6 @@ div.codeblock > div.blockcontent {
 	border: none;
 	border-radius: 10px;
 	background: #f6f8fa;
-}
-
-span.pycommand {
-	color: #000070;
-}
-
-span.statement {
-	color: #008800;
-}
-span.builtin {
-	color: #000088;
-}
-span.special {
-	color: #990000;
-}
-span.operator {
-	color: #880000;
-}
-span.error {
-	color: #aa0000;
-}
-span.comment, span.comment > *, span.string, span.string > * {
-	color: #606060;
 }
 
 @media print {
@@ -839,9 +808,6 @@ div#text-container h2 + h3{
 	margin-top: 0px;
 }
 
-div#text-container p{
-}
-
 
 div#main{
 	margin: auto;
@@ -855,9 +821,6 @@ div#main{
   background: none;
   color: none;
   border: none;
-}
-
-.openbtn:hover {
 }
 
 
@@ -926,11 +889,6 @@ div#layout-menu-container .closebtn {
 	  background: #ffdce0;
 	  color: #959da5;
 	}
-
-	div#layout-menu-container .closebtn:hover {
-		background: #fdaeb7;
-		color: #cb2431;
-	}
 }
 
 /* Width to center image */
@@ -951,8 +909,6 @@ div#layout-menu-container .closebtn {
 		min-height: calc(100vh - 190px);
 	}
 
-	div#footer-container{
-	}
 
 	div#footer {
 		padding-left:   20px;
