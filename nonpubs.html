@@ -12,6 +12,10 @@
    <body>
       <div id="main-container">
          <div id="layout-content">
+            <div id="toptitle">
+               <h1>Professor Madhusudhan R.</h1>
+               <p>Department of Mathematical And Computational Sciences, National Institute of Technology Karnataka, Surathkal</p>
+            </div>
             <p>
                 <div id="button-container">
                     <input class="fButton" type="button" value="Home" onclick="parent.location='index.html'" />
@@ -23,7 +27,7 @@
                         <input class="fButton" type="button" value="Publications" />
                         <div class="dropdown-content">
                             <a href="international_journals.html">International Journals</a>
-                            <a href="conferences.html">Conferences</a>
+                            <a href="conferences.html">International Conferences</a>
                         </div>
                     </div>
     
@@ -40,102 +44,27 @@
                     <input class="fButton" type="button" value="Gallery" onclick="parent.location='gallery.html'" />
                   </div>
                 </p>
-            <!-- nomenu  -->
-            <div id="toptitle">
-               <h1>Visits Abroad</h1>
-               <div id="subtitle"><a href="index.html">R. Madhusudhan</a> | MACS, NIT Karnataka</div>
+
+            <div>
+               <h2>Visits Abroad</h2>
             </div>
             
-            <table class="styled-table">
+            <table class="styled-table" id="paginated-table">
                <thead>
-                  <tr>
-                     <th>Sl. No</th>
-                     <th>Activity</th>
-                     <th>Conference Name</th>
-                     <th>Place</th>
-                     <th>Date</th>
-                  </tr>
+                   <tr>
+                       <th>Sl. No</th>
+                       <th>Activity</th>
+                       <th>Place</th>
+                       <th>Date</th>
+                   </tr>
                </thead>
-               <tbody>
-                  <tr>
-                     <td>1</td>
-                     <td>Research Interaction</td>
-                     <td>-</td>
-                     <td>University of Melbourne, Australia</td>
-                     <td>Nov 20th - Dec 10th, 2008</td>
-                  </tr>
-                  <tr>
-                     <td>2</td>
-                     <td>International Conference</td>
-                     <td>The 2011 International Conference on Computer Applications and Network Security (ICCANS 2011)</td>
-                     <td>MALE, Maldives</td>
-                     <td>May 27th - 29th, 2011</td>
-                  </tr>
-                  <tr>
-                     <td>3</td>
-                     <td>International Conference</td>
-                     <td>Conference on Information Security (CIS 2014)</td>
-                     <td>Suzhou, China</td>
-                     <td>March 10th - 12th, 2014</td>
-                  </tr>
-                  <tr>
-                     <td>4</td>
-                     <td>International Conference</td>
-                     <td>IEEE 8th International Symposium on Service Oriented System Engineering</td>
-                     <td>OXFORD University, UK</td>
-                     <td>April 7th - 10th, 2014</td>
-                  </tr>
-                  <tr>
-                     <td>5</td>
-                     <td>International Conference</td>
-                     <td>International Conference on Computer and Applications (ICCA)</td>
-                     <td>Dubai, United Arab Emirates</td>
-                     <td>September 14th - 15th, 2016</td>
-                  </tr>
-                  <tr>
-                     <td>6</td>
-                     <td>International Conference</td>
-                     <td>6th International Conference Computer and Communication Engineering 2016 (ICCCE 2016)</td>
-                     <td>Kuala Lumpur, Malaysia</td>
-                     <td>July 25th - 27th, 2016</td>
-                  </tr>
-                  <tr>
-                     <td>7</td>
-                     <td>International Conference</td>
-                     <td>6th International Conference on Communication and Network Security (ICCNS 2016)</td>
-                     <td>Nanyang Technological University, Singapore</td>
-                     <td>November 26th - 29th, 2016</td>
-                  </tr>
-                  <tr>
-                     <td>8</td>
-                     <td>International Conference</td>
-                     <td>2nd Cyber Security In Networking Conference in Paris (CSNet)</td>
-                     <td>Paris, France</td>
-                     <td>October 24th - 26th, 2018</td>
-                  </tr>
-                  <tr>
-                     <td>9</td>
-                     <td>International Conference</td>
-                     <td>IEEE 10th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON)</td>
-                     <td>Columbia University, New York, USA</td>
-                     <td>October 10th - 12th, 2019</td>
-                  </tr>
-                  <tr>
-                     <td>10</td>
-                     <td>International Conference</td>
-                     <td>7th Cyber Security In Networking Conference in Paris(CSNet 2023)</td>
-                     <td>Montrel, Canada</td>
-                     <td>October 16th - 18th, 2023</td>
-                  </tr>
-                  <tr>
-                     <td>11</td>
-                     <td>International Conference</td>
-                     <td>The 38th International Conference on Advanced Information Networking and Applications (AINA-2024)</td>
-                     <td>Kitakyushu International Conference Center, Kitakyushu, Japan</td>
-                     <td>April 17th - 19th, 2024</td>
-                  </tr>
+               <tbody id="table-body">
                </tbody>
-            </table>
+           </table>
+           
+           <div id="pagination-controls"></div>
+           <script src="visits.js"></script>
+           
          </div>
          <!-- <div id="layout-content"> -->
          <div id="footer-container">

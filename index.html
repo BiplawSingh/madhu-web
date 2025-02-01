@@ -12,7 +12,11 @@
    <body>
       <div id="main-container">
          <div id="layout-content">
-            <!-- nomenu  -->
+            <div id="toptitle">
+               <h1>Professor Madhusudhan R.</h1>
+               <p>Department of Mathematical And Computational Sciences, National Institute of Technology Karnataka, Surathkal</p>
+            </div>
+            
             <p>
               <div id="button-container">
                 <input class="fButton" type="button" value="Home" onclick="parent.location='index.html'" />
@@ -24,7 +28,7 @@
                     <input class="fButton" type="button" value="Publications" />
                     <div class="dropdown-content">
                         <a href="international_journals.html">International Journals</a>
-                        <a href="conferences.html">Conferences</a>
+                        <a href="conferences.html">International Conferences</a>
                     </div>
                 </div>
 
@@ -39,19 +43,25 @@
                 <input class="fButton" type="button" value="Outreach" onclick="parent.location='outreach.html'" />
                 <input class="fButton" type="button" value="Contact" onclick="parent.location='contact.html'" />
                 <input class="fButton" type="button" value="Gallery" onclick="parent.location='gallery.html'" />
-                <!-- <input class="fButton" type="button" value="Detailed CV" onclick="parent.location='gallery.html'" /> -->
              </div>
-
-              </p>
-            <div id="toptitle">
-               <h1>R. Madhusudhan</h1>
-               <div id="subtitle">Professor | <a href="https://macs.nitk.ac.in/" target=&ldquo;blank&rdquo;>MACS</a>, <a href="https://www.nitk.ac.in/" target=&ldquo;blank&rdquo;>NIT Karnataka</a></div>
-            </div>
-            <div id="text-img-container">
-               <div id="img-container">
-                  <img src="images/profile.jpg" alt="" width="184px" />
+               <div id="carousel-container">
+                  <button id="prev" class="carousel-arrow">&#10094;</button>
+                  <div id="carousel">
+                     <img class="carousel-image" src="images/image1.jpg" alt="Image 1">
+                     <img class="carousel-image" src="images/image2.jpg" alt="Image 2">
+                     <img class="carousel-image" src="images/image3.jpg" alt="Image 3">
+                     <img class="carousel-image" src="images/image4.jpg" alt="Image 4">
+                     <img class="carousel-image" src="images/image5.jpg" alt="Image 5">
+                     <img class="carousel-image" src="images/image6.jpg" alt="Image 6">
+                     <img class="carousel-image" src="images/image7.jpg" alt="Image 7">
+                     <img class="carousel-image" src="images/image8.jpg" alt="Image 8">
+                     <img class="carousel-image" src="images/image9.jpg" alt="Image 9">
                </div>
-            </div>
+               <button id="next" class="carousel-arrow">&#10095;</button>
+        </div>
+        
+         </p>
+           
          </div>
          <!-- <div id="layout-content"> -->
          <div id="footer-container">
