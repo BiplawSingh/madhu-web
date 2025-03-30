@@ -33,50 +33,43 @@ function closeNav() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".carousel-image");
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel');
+    const images = document.querySelectorAll('.carousel-image');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    
     let currentIndex = 0;
-    const totalImages = images.length;
-    const intervalTime = 30000; // 30 seconds
-
+    
+    images.forEach((img, index) => {
+      if (index !== 0) {
+        img.style.display = 'none';
+      }
+    });
+    
     function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.remove("active");
-            if (i === index) {
-                img.classList.add("active");
-            }
-        });
+      images.forEach(img => {
+        img.style.display = 'none';
+      });
+      
+      images[index].style.display = 'block';
     }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        showImage(currentIndex);
-    }
-
-    showImage(currentIndex);
-
-    let imageInterval = setInterval(nextImage, intervalTime);
-
-    document.getElementById("next").addEventListener("click", function () {
-        nextImage();
-        resetInterval();
+    
+    prevBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
     });
-
-    document.getElementById("prev").addEventListener("click", function () {
-        prevImage();
-        resetInterval();
+    
+    nextBtn.addEventListener('click', function() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
     });
-
-    function resetInterval() {
-        clearInterval(imageInterval);
-        imageInterval = setInterval(nextImage, intervalTime);
-    }
-});
+    
+    setInterval(function() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }, 5000);
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".gallery-item img");

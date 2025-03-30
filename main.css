@@ -920,7 +920,6 @@ div#layout-menu-container .closebtn {
 	}
 }
 
-/* Width to center image */
 @media screen and (max-width: 700px) {
 	img{
 		margin-right: 0px;
@@ -1052,64 +1051,72 @@ div#member p{
   }
 }
 
-#carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-	margin: 20px 10px;
-    overflow: hidden;
-    text-align: center;
-}
 
-#carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
 
-.carousel-image {
-    width: 100%;
-    height: auto;
-    display: none; 
-}
-
-.carousel-image.active {
-    display: block;
-}
-
-.carousel-arrow {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 50px; 
-    height: 50px;
-    border-radius: 50%;
-    display: none; 
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    transition: background 0.3s ease, opacity 0.3s ease;
-}
-
-#prev {
-    left: 20px;
-}
-
-#next {
-    right: 20px;
-}
-
-#carousel-container:hover .carousel-arrow {
-    display: block;
-    opacity: 1;
-}
-
-.carousel-arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+#button-container {
+	margin-bottom: 30px;
+  }
+  
+  #carousel-container {
+	width: 90%;
+	max-width: 1200px; 
+	height: 700px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #carousel {
+	display: flex;
+	height: 100%;
+	transition: transform 0.5s ease;
+  }
+  
+  .carousel-image {
+	min-width: 100%;
+	width: 100%;
+	height: 700px;
+	object-fit: contain;
+	object-position: center;
+  }
+  
+  .carousel-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 15px 20px;
+	cursor: pointer;
+	z-index: 10;
+	font-size: 20px;
+	border-radius: 50%;
+	transition: background 0.3s;
+  }
+  
+  .carousel-arrow:hover {
+	background: rgba(0, 0, 0, 0.7);
+  }
+  
+  #prev {
+	left: 20px;
+  }
+  
+  #next {
+	right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+	#carousel-container {
+	  height: 400px;
+	}
+	
+	.carousel-image {
+	  height: 400px;
+	}
+  }
 
 #gallery-container {
     display: grid;
